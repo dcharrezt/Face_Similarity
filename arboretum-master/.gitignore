@@ -1,0 +1,4 @@
+docs/doxygen.log
+docs/html
+libarboretum.so
+*.o
