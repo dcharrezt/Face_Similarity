@@ -1,7 +1,9 @@
 #include <string>
 #include "CImg.h"
 #include <iostream>
-
+#include <sstream>
+#include <stdio.h>
+#include <stdlib.h>
 using namespace cimg_library;
 using namespace std;
 #include "haar.hpp"
@@ -49,7 +51,10 @@ void indexar()
 {
 	int aux = 0;
 	int numero = 1;
-	char letra = 'a';	
+	char letra = 'a';
+    string post;
+    string pre;
+    pre = "/home/eduardob/Desktop/Aed_Final/Face_Similarity/yalefaces/yalefaces/";	
 	while(aux<165)
 	{
 		if(numero == 12)
@@ -57,10 +62,33 @@ void indexar()
 			numero = 1;
 			letra++;
 		}
-		
+		stringstream ss;
+		string letrastring;
+		ss << letra;
+		ss >> letrastring;
+		char numstr[21];
+		sprintf(numstr, "%d", numero);
+		post = letrastring + numstr +".gif";
+		string direccion = pre + post;
+		cout<<direccion<<endl;
+		CImg<unsigned char> image(direccion.c_str());
+		int height, width; 
+		height = image.height();
+		width = image.width();
+		int rows =(int) height;
+		int cols =(int) width;
+		double myimage[rows*cols];
 
-		
-		cout<<numero<<letra<<endl;
+		idwt(rows,cols,myimage,image);
+				
+		/*
+		CImgDisplay main_disp(image,direccion.c_str());
+		while(!main_disp.is_closed())
+		{
+			main_disp.wait();
+		}
+		*/
+
 		numero++;
 		aux++;
 	}
