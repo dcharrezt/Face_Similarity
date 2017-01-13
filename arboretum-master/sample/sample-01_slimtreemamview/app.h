@@ -9,7 +9,7 @@
 #define appH
 
 // Metric Tree includes
-#include <arboretum/stBasicObjects.h>
+#include <stBasicObjects.h>
 #include <arboretum/stBasicMetricEvaluators.h>
 #include <arboretum/stMetricTree.h>
 #include <arboretum/stMemoryPageManager.h>

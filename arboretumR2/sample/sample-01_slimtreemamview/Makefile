@@ -1,21 +1,21 @@
 # Makefile for GCC
 #
-# Author: Marcos Rodrigues Vieira
 # Author: Fabio Jun Takada Chino
 #
-INCLUDEPATH=../../arboretum
-LIBPATH=-L../..
+CC=gcc
+CFLAGS=-D__stMAMVIEW__
+INCLUDEPATH=../../include
+LIBPATH=-L../../lib
 INCLUDE=-I$(INCLUDEPATH)
 LIBS=-lstdc++ -lm -larboretum
-SRC= app.cpp Cities.cpp city.cpp
+SRC= app.cpp mainTest.cpp
 OBJS=$(subst .cpp,.o,$(SRC))
+
 
 # Implicit Rules
 %.o: %.cpp $(HEADERS)
 	$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDE)
 
-Cities: $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o Cities $(INCLUDE) $(LIBPATH) $(LIBS)
-
-clean:
-	-rm Cities *.o
+sample1: $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o sample1 $(INCLUDE) $(LIBPATH) $(LIBS)
+	
