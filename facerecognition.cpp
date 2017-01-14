@@ -11,31 +11,35 @@ using namespace std;
 
 double* idwt(int rows,int cols,double myimage[], CImg<unsigned char> image)
 {
-	double matriz[cols][rows];
+	double matriz[rows+1][cols+1];
 	double R,G,B;
-	for(int i = 0;i<cols;i++)
+	cout<<"muero"<<endl;
+	for(int i = 0;i<=cols;i++)
 	{	
-   	 for(int j=0;j<rows;j++)
+   	 for(int j=0;j<=rows;j++)
    	 {
-    	    R=image(i,j,0);
-        	G=image(i,j,1);
-        	B=image(i,j,2);
-        	matriz[i][j]=(0.299*R + 0.587*G + 0.114*B);
-
-    	}
-	}
+		
+			cout<<i<<endl<<j<<endl;
+    	    R=(float)image(i,j,0);
+        	G=(float)image(i,j,1);
+        	B=(float)image(i,j,2);
+			cout<<"miau"<<endl;
+        	matriz[j][i]=(0.299*R + 0.587*G + 0.114*B);
 	
+     }
+	}
+	cout<<"pase"<<endl;
 	for(int i = 0;i<cols;i++)
 	{
 		for(int j = 0; j<rows; j++)
 		{
-			myimage[i*cols + j] = matriz[i][j];
+			myimage[j*cols + i] = matriz[i][j];
 			//cout<<myimage[i*cols + j];
 		}
 	}
-
+	cout<<"vector hecho"<<endl;
 	haar_2d(cols,rows,myimage);
-	
+	///convertirlo de nuevo a matriz para verificar(solo es para ver si esta bien)
 	/*for(int i = 0;i<cols;i++)
 	{
 		for(int j = 0; j<rows; j++)
@@ -51,6 +55,7 @@ void indexar()
 {
 	int aux = 0;
 	int numero = 1;
+	//double** myimage = new double*[165];
 	char letra = 'a';
     string post;
     string pre;
@@ -68,27 +73,31 @@ void indexar()
 		ss >> letrastring;
 		char numstr[21];
 		sprintf(numstr, "%d", numero);
-		post = letrastring + numstr +".gif";
+		post = letrastring + numstr +".pgm";
 		string direccion = pre + post;
 		cout<<direccion<<endl;
-		CImg<unsigned char> image(direccion.c_str());
+		CImg<unsigned char> image(direccion.c_str());//,visu(500,400,1,3,0);
+		CImgDisplay main_disp(image,direccion.c_str());
 		int height, width; 
 		height = image.height();
 		width = image.width();
 		int rows =(int) height;
 		int cols =(int) width;
-		double myimage[rows*cols];
+		//
+		//myimage[aux] = new double[rows*cols];
+		//
+		double myimage[(rows+1)*(cols+1)];
 
-		idwt(rows,cols,myimage,image);
-				
-		/*
-		CImgDisplay main_disp(image,direccion.c_str());
-		while(!main_disp.is_closed())
+		idwt(rows,cols,myimage,image);	
+		cout<<"ey"<<endl;	
+		
+		
+		/*while(!main_disp.is_closed())
 		{
 			main_disp.wait();
-		}
-		*/
-
+		}*/
+		
+		//delete [] myimage;
 		numero++;
 		aux++;
 	}
