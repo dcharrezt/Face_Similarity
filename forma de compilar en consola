@@ -1,2 +1,2 @@
-g++ facerecognition.cpp -o face -O2 -L/usr/X11R6/lib -lm -lpthread -lX11 -lrt -lnsl
+g++ -std=c++17 facerecognition.cpp -o face -O2 -L/usr/X11R6/lib -lm -lpthread -lX11 -lrt
 
