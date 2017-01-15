@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE mamview SYSTEM "mamview.dtd">
+<animation>
+	<description>
+		<title>
+			Slim-Tree: k-Nearest Neighbor Query with page size 4096
+		</title>
+		<comment>
+			The k of this nearest neighbor query is 15
+		</comment>
+	</description>
+	<frame id="0">
+		<comment>
+			Entering in the index node 3 at level 0
+		</comment>
+		<command name="ACTIVATENODE">
+			<param name="nodeid" value="3" />
+		</command>
+		<node active="true" id="1" parent="3" type="0" level="1" >
+			<repobj radius="1.93633e+09" x="1.25971e+09" y="1.43457e+09" z="1.70368e+09" />
+		</node>
+		<node active="true" id="4" parent="3" type="0" level="1" >
+			<repobj radius="1.17993e+09" x="1.92473e+09" y="2.37815e+09" z="1.87116e+09" />
+		</node>
+		<node active="true" id="5" parent="3" type="0" level="1" >
+			<repobj radius="1.90139e+09" x="2.39267e+09" y="1.66741e+09" z="7.95993e+08" />
+		</node>
+		<node active="true" id="2" parent="3" type="0" level="1" >
+			<repobj radius="1.13382e+09" x="1.39686e+09" y="1.35056e+09" z="1.27758e+09" />
+		</node>
+		<node active="true" id="6" parent="3" type="0" level="1" >
+			<repobj radius="1.91575e+09" x="1.83429e+09" y="2.30791e+09" z="1.13406e+09" />
+		</node>
+		<node active="true" id="7" parent="3" type="0" level="1" >
+			<repobj radius="2.02021e+09" x="1.92043e+09" y="2.14111e+09" z="1.94073e+09" />
+		</node>
+		<query>
+			<sample x="2.17533e+09" y="1.16278e+09" z="1.03643e+09" k="15" radius="-1" innerRadius="0" outerRadius="0" />
+		</query>
+	</frame>
+	<frame id="1">
+		<comment>
+			Entering in the leaf node 2 at level 1
+		</comment>
+		<command name="ACTIVATENODE">
+			<param name="nodeid" value="2" />
+		</command>
+		<object active="true" x="1.39686e+09" y="1.35056e+09" z="1.27758e+09" level="1" parent="2" />
+		<object active="true" x="1.67566e+09" y="1.03438e+09" z="1.59622e+09" level="1" parent="2" />
+		<object active="true" x="1.27202e+09" y="1.52889e+09" z="1.25778e+09" level="1" parent="2" />
+		<object active="true" x="1.40316e+09" y="1.15094e+09" z="1.38177e+09" level="1" parent="2" />
+		<object active="true" x="1.02743e+09" y="1.11857e+09" z="1.8893e+09" level="1" parent="2" />
+		<object active="true" x="1.46456e+09" y="1.45829e+09" z="1.55877e+09" level="1" parent="2" />
+		<object active="true" x="1.41469e+09" y="1.69289e+09" z="8.58108e+08" level="1" parent="2" />
+		<object active="true" x="7.30492e+08" y="9.01626e+08" z="7.09338e+08" level="1" parent="2" />
+		<object active="true" x="1.81185e+09" y="1.96626e+09" z="8.79636e+08" level="1" parent="2" />
+		<object active="true" x="1.09517e+09" y="1.15499e+09" z="1.19808e+09" level="1" parent="2" />
+		<object active="true" x="6.74119e+08" y="1.99815e+09" z="1.24263e+09" level="1" parent="2" />
+		<object active="true" x="1.22574e+09" y="9.21571e+08" z="1.81668e+09" level="1" parent="2" />
+		<object active="true" x="6.73346e+08" y="9.3985e+08" z="1.89388e+09" level="1" parent="2" />
+		<object active="true" x="1.14544e+09" y="1.88833e+09" z="1.11454e+09" level="1" parent="2" />
+		<object active="true" x="1.71657e+09" y="1.00357e+09" z="1.38379e+09" level="1" parent="2" />
+		<object active="true" x="1.5837e+09" y="1.17685e+09" z="1.05076e+09" level="1" parent="2" />
+		<object active="true" x="1.45256e+09" y="2.03091e+09" z="1.13505e+09" level="1" parent="2" />
+		<object active="true" x="1.56939e+09" y="2.19731e+09" z="7.77031e+08" level="1" parent="2" />
+		<object active="true" x="1.65567e+09" y="1.92449e+09" z="9.35429e+08" level="1" parent="2" />
+	</frame>
+	<frame id="2">
+		<comment>
+			The result after the leaf node 2 at level 1 has 15 object(s) and radius 1948009809.592114
+		</comment>
+		<query>
+			<sample x="2.17533e+09" y="1.16278e+09" z="1.03643e+09" k="15" radius="1.94801e+09" innerRadius="0" outerRadius="0" />
+			<answer x="1.71657e+09" y="1.00357e+09" z="1.38379e+09" distance="6.1266e+08" />
+			<answer x="1.81185e+09" y="1.96626e+09" z="8.79636e+08" distance="1.01065e+09" />
+			<answer x="1.41469e+09" y="1.69289e+09" z="8.58108e+08" distance="1.18448e+09" />
+			<answer x="1.39686e+09" y="1.35056e+09" z="1.27758e+09" distance="1.32454e+09" />
+			<answer x="1.27202e+09" y="1.52889e+09" z="1.25778e+09" distance="1.40307e+09" />
+			<answer x="1.5837e+09" y="1.17685e+09" z="1.05076e+09" distance="1.4042e+09" />
+			<answer x="1.22574e+09" y="9.21571e+08" z="1.81668e+09" distance="1.41599e+09" />
+			<answer x="1.65567e+09" y="1.92449e+09" z="9.35429e+08" distance="1.4185e+09" />
+			<answer x="1.45256e+09" y="2.03091e+09" z="1.13505e+09" distance="1.47083e+09" />
+			<answer x="1.56939e+09" y="2.19731e+09" z="7.77031e+08" distance="1.58231e+09" />
+			<answer x="1.02743e+09" y="1.11857e+09" z="1.8893e+09" distance="1.68873e+09" />
+			<answer x="1.09517e+09" y="1.15499e+09" z="1.19808e+09" distance="1.7021e+09" />
+			<answer x="6.73346e+08" y="9.3985e+08" z="1.89388e+09" distance="1.84442e+09" />
+			<answer x="1.46456e+09" y="1.45829e+09" z="1.55877e+09" distance="1.92699e+09" />
+			<answer x="7.30492e+08" y="9.01626e+08" z="7.09338e+08" distance="1.94801e+09" />
+		</query>
+	</frame>
+	<frame id="3">
+		<comment>
+			Entering in the leaf node 5 at level 1
+		</comment>
+		<command name="ACTIVATENODE">
+			<param name="nodeid" value="5" />
+		</command>
+		<object active="true" x="2.39267e+09" y="1.66741e+09" z="7.95993e+08" level="1" parent="5" />
+		<object active="true" x="2.69117e+09" y="9.24716e+08" z="9.526e+08" level="1" parent="5" />
+		<object active="true" x="2.03677e+09" y="3.70132e+08" z="9.13368e+08" level="1" parent="5" />
+		<object active="true" x="1.9126e+09" y="1.32681e+09" z="4.43235e+08" level="1" parent="5" />
+		<object active="true" x="2.9728e+09" y="6.04219e+08" z="1.49155e+09" level="1" parent="5" />
+		<object active="true" x="1.39754e+09" y="1.27445e+09" z="-2.9256e-07" level="1" parent="5" />
+		<object active="true" x="1.21649e+09" y="1.24891e+09" z="4.55533e+08" level="1" parent="5" />
+		<object active="true" x="2.01608e+09" y="1.95633e+09" z="-2.00095e+08" level="1" parent="5" />
+		<object active="true" x="2.77215e+09" y="1.76344e+09" z="2.92995e+08" level="1" parent="5" />
+		<object active="true" x="1.46232e+09" y="3.35899e+08" z="9.2056e+08" level="1" parent="5" />
+		<object active="true" x="1.8667e+09" y="1.53261e+09" z="1.35156e+07" level="1" parent="5" />
+		<object active="true" x="1.68421e+09" y="8.40718e+08" z="8.34343e+08" level="1" parent="5" />
+		<object active="true" x="2.65513e+09" y="2.19462e+09" z="3.3887e+08" level="1" parent="5" />
+		<object active="true" x="2.75927e+09" y="9.7229e+08" z="7.70478e+08" level="1" parent="5" />
+		<object active="true" x="2.37481e+09" y="1.96059e+09" z="7.38519e+08" level="1" parent="5" />
+		<object active="true" x="2.43628e+09" y="1.04098e+09" z="1.24162e+09" level="1" parent="5" />
+		<object active="true" x="2.38041e+09" y="1.99097e+09" z="2.76328e+08" level="1" parent="5" />
+		<object active="true" x="2.99993e+09" y="2.24559e+09" z="5.97077e+08" level="1" parent="5" />
+		<object active="true" x="2.56971e+09" y="8.91216e+08" z="1.19944e+09" level="1" parent="5" />
+		<object active="true" x="1.58841e+09" y="2.73654e+09" z="8.20606e+08" level="1" parent="5" />
+		<object active="true" x="3.139e+09" y="1.78693e+09" z="2.19179e+09" level="1" parent="5" />
+		<object active="true" x="2.67532e+09" y="2.51225e+09" z="6.35486e+08" level="1" parent="5" />
+		<object active="true" x="1.73774e+09" y="1.82116e+09" z="6.87997e+08" level="1" parent="5" />
+		<object active="true" x="2.42012e+09" y="1.52031e+09" z="1.2166e+09" level="1" parent="5" />
+		<object active="true" x="2.22996e+09" y="2.28083e+09" z="8.00511e+08" level="1" parent="5" />
+		<object active="true" x="1.84229e+09" y="2.60777e+09" z="1.37808e+09" level="1" parent="5" />
+		<object active="true" x="1.8718e+09" y="2.4326e+09" z="7.50971e+08" level="1" parent="5" />
+		<object active="true" x="3.24763e+09" y="9.81614e+08" z="8.87012e+08" level="1" parent="5" />
+		<object active="true" x="1.13877e+09" y="1.2113e+09" z="7.67181e+08" level="1" parent="5" />
+		<object active="true" x="1.6584e+09" y="2.70526e+09" z="2.57551e+08" level="1" parent="5" />
+		<object active="true" x="2.01412e+09" y="1.55127e+09" z="1.76756e+09" level="1" parent="5" />
+		<object active="true" x="2.38421e+09" y="2.41507e+09" z="6.82964e+08" level="1" parent="5" />
+		<object active="true" x="1.8431e+09" y="1.36748e+09" z="1.24527e+09" level="1" parent="5" />
+		<object active="true" x="2.7015e+09" y="1.65647e+09" z="1.51212e+09" level="1" parent="5" />
+		<object active="true" x="2.62488e+09" y="1.76422e+09" z="1.05656e+09" level="1" parent="5" />
+		<object active="true" x="1.44685e+09" y="2.96509e+09" z="6.18044e+08" level="1" parent="5" />
+		<object active="true" x="1.44504e+09" y="1.03134e+09" z="1.09488e+09" level="1" parent="5" />
+		<object active="true" x="1.14269e+09" y="1.4257e+09" z="1.28504e+09" level="1" parent="5" />
+		<object active="true" x="1.62748e+09" y="2.60106e+09" z="7.46498e+08" level="1" parent="5" />
+		<object active="true" x="1.6055e+09" y="1.15698e+09" z="1.88127e+09" level="1" parent="5" />
+		<object active="true" x="2.0546e+09" y="1.79239e+09" z="2.58632e+08" level="1" parent="5" />
+		<object active="true" x="1.57434e+09" y="1.5007e+09" z="1.08444e+09" level="1" parent="5" />
+		<object active="true" x="1.57482e+09" y="1.54595e+09" z="1.2195e+09" level="1" parent="5" />
+		<object active="true" x="1.76632e+09" y="2.42337e+09" z="4.96799e+08" level="1" parent="5" />
+		<object active="true" x="2.1364e+09" y="1.20422e+09" z="1.60055e+09" level="1" parent="5" />
+		<object active="true" x="1.81589e+09" y="8.35013e+08" z="1.6081e+09" level="1" parent="5" />
+		<object active="true" x="2.29903e+09" y="5.84781e+08" z="9.36188e+08" level="1" parent="5" />
+		<object active="true" x="2.63034e+09" y="1.41683e+09" z="7.13331e+08" level="1" parent="5" />
+		<object active="true" x="2.69841e+09" y="2.02119e+09" z="1.33534e+09" level="1" parent="5" />
+		<object active="true" x="1.37175e+09" y="2.30634e+09" z="5.57837e+08" level="1" parent="5" />
+		<object active="true" x="2.7112e+09" y="1.92272e+09" z="1.1317e+09" level="1" parent="5" />
+		<object active="true" x="1.97998e+09" y="2.03873e+09" z="8.14992e+08" level="1" parent="5" />
+		<object active="true" x="1.27502e+09" y="1.62509e+09" z="4.24293e+08" level="1" parent="5" />
+		<object active="true" x="2.7956e+09" y="1.28112e+09" z="8.47011e+08" level="1" parent="5" />
+		<object active="true" x="1.26163e+09" y="1.9021e+09" z="6.52762e+08" level="1" parent="5" />
+		<object active="true" x="1.50855e+09" y="6.09465e+08" z="1.36359e+09" level="1" parent="5" />
+		<object active="true" x="1.43984e+09" y="2.14388e+09" z="1.47789e+09" level="1" parent="5" />
+		<object active="true" x="3.43385e+09" y="1.02182e+09" z="1.51605e+09" level="1" parent="5" />
+		<object active="true" x="2.68913e+09" y="3.07109e+09" z="1.43685e+09" level="1" parent="5" />
+	</frame>
+	<frame id="4">
+		<comment>
+			The result after the leaf node 5 at level 1 has 15 object(s) and radius 1251702833.893264
+		</comment>
+		<query>
+			<sample x="2.17533e+09" y="1.16278e+09" z="1.03643e+09" k="15" radius="1.2517e+09" innerRadius="0" outerRadius="0" />
+			<answer x="1.71657e+09" y="1.00357e+09" z="1.38379e+09" distance="6.1266e+08" />
+			<answer x="2.1364e+09" y="1.20422e+09" z="1.60055e+09" distance="7.3069e+08" />
+			<answer x="1.57434e+09" y="1.5007e+09" z="1.08444e+09" distance="7.83363e+08" />
+			<answer x="1.57482e+09" y="1.54595e+09" z="1.2195e+09" distance="7.88202e+08" />
+			<answer x="2.7956e+09" y="1.28112e+09" z="8.47011e+08" distance="8.94375e+08" />
+			<answer x="2.56971e+09" y="8.91216e+08" z="1.19944e+09" distance="9.14509e+08" />
+			<answer x="2.42012e+09" y="1.52031e+09" z="1.2166e+09" distance="9.7979e+08" />
+			<answer x="1.81185e+09" y="1.96626e+09" z="8.79636e+08" distance="1.01065e+09" />
+			<answer x="2.69117e+09" y="9.24716e+08" z="9.526e+08" distance="1.03208e+09" />
+			<answer x="1.6055e+09" y="1.15698e+09" z="1.88127e+09" distance="1.0884e+09" />
+			<answer x="1.8431e+09" y="1.36748e+09" z="1.24527e+09" distance="1.09728e+09" />
+			<answer x="1.81589e+09" y="8.35013e+08" z="1.6081e+09" distance="1.15192e+09" />
+			<answer x="1.41469e+09" y="1.69289e+09" z="8.58108e+08" distance="1.18448e+09" />
+			<answer x="2.63034e+09" y="1.41683e+09" z="7.13331e+08" distance="1.19621e+09" />
+			<answer x="2.03677e+09" y="3.70132e+08" z="9.13368e+08" distance="1.2517e+09" />
+		</query>
+	</frame>
+	<frame id="5">
+		<comment>
+			Entering in the leaf node 1 at level 1
+		</comment>
+		<command name="ACTIVATENODE">
+			<param name="nodeid" value="1" />
+		</command>
+		<object active="true" x="1.25971e+09" y="1.43457e+09" z="1.70368e+09" level="1" parent="1" />
+		<object active="true" x="1.14352e+09" y="2.33796e+09" z="1.54445e+09" level="1" parent="1" />
+		<object active="true" x="6.11521e+08" y="1.33632e+09" z="1.59259e+09" level="1" parent="1" />
+		<object active="true" x="1.22034e+09" y="1.31192e+09" z="2.08604e+09" level="1" parent="1" />
+		<object active="true" x="2.121e+09" y="1.28881e+09" z="2.05059e+09" level="1" parent="1" />
+		<object active="true" x="9.49497e+08" y="1.24775e+09" z="1.98697e+09" level="1" parent="1" />
+		<object active="true" x="2.69418e+09" y="1.62962e+09" z="1.49889e+09" level="1" parent="1" />
+		<object active="true" x="1.28122e+09" y="2.91087e+09" z="7.55073e+08" level="1" parent="1" />
+		<object active="true" x="1.7789e+09" y="1.22279e+09" z="1.86059e+09" level="1" parent="1" />
+		<object active="true" x="2.60719e+08" y="2.40179e+09" z="1.12503e+09" level="1" parent="1" />
+		<object active="true" x="-2.88766e-07" y="1.83421e+09" z="1.32026e+09" level="1" parent="1" />
+		<object active="true" x="1.5539e+09" y="1.53914e+09" z="1.18118e+09" level="1" parent="1" />
+		<object active="true" x="1.85534e+09" y="1.83219e+09" z="1.79071e+09" level="1" parent="1" />
+		<object active="true" x="9.97303e+08" y="9.10166e+08" z="1.56375e+09" level="1" parent="1" />
+		<object active="true" x="2.19626e+09" y="1.51126e+09" z="7.56008e+08" level="1" parent="1" />
+		<object active="true" x="2.46651e+09" y="2.08614e+09" z="1.31591e+09" level="1" parent="1" />
+		<object active="true" x="1.4467e+09" y="1.31088e+09" z="2.0035e+09" level="1" parent="1" />
+		<object active="true" x="2.19238e+09" y="1.59144e+09" z="9.05354e+08" level="1" parent="1" />
+		<object active="true" x="7.68991e+08" y="2.73028e+09" z="1.26318e+09" level="1" parent="1" />
+		<object active="true" x="1.65559e+09" y="2.42531e+09" z="5.84329e+08" level="1" parent="1" />
+		<object active="true" x="8.28989e+08" y="1.45209e+09" z="2.0131e+09" level="1" parent="1" />
+		<object active="true" x="9.64018e+08" y="2.44811e+09" z="1.21923e+09" level="1" parent="1" />
+		<object active="true" x="1.54227e+09" y="1.53362e+09" z="1.90996e+09" level="1" parent="1" />
+		<object active="true" x="5.28776e+08" y="1.66573e+09" z="1.48641e+09" level="1" parent="1" />
+		<object active="true" x="1.95391e+09" y="1.61701e+09" z="1.25037e+09" level="1" parent="1" />
+		<object active="true" x="1.42793e+09" y="1.38403e+09" z="9.02915e+08" level="1" parent="1" />
+		<object active="true" x="1.97107e+09" y="2.30686e+09" z="1.84998e+09" level="1" parent="1" />
+		<object active="true" x="1.78658e+09" y="1.82937e+09" z="1.61984e+09" level="1" parent="1" />
+		<object active="true" x="1.21768e+09" y="1.71492e+09" z="1.23175e+09" level="1" parent="1" />
+		<object active="true" x="1.33482e+09" y="9.43921e+08" z="9.6372e+08" level="1" parent="1" />
+		<object active="true" x="1.92458e+09" y="2.0332e+09" z="8.99883e+08" level="1" parent="1" />
+		<object active="true" x="1.97096e+09" y="2.11702e+09" z="7.41992e+08" level="1" parent="1" />
+		<object active="true" x="2.0644e+09" y="2.35462e+09" z="1.01101e+09" level="1" parent="1" />
+		<object active="true" x="2.02058e+09" y="1.72922e+09" z="1.29021e+09" level="1" parent="1" />
+		<object active="true" x="1.56305e+09" y="1.51616e+09" z="1.70757e+09" level="1" parent="1" />
+		<object active="true" x="1.66235e+09" y="2.77637e-07" z="1.34116e+09" level="1" parent="1" />
+		<object active="true" x="1.23287e+09" y="1.01909e+09" z="1.8121e+09" level="1" parent="1" />
+		<object active="true" x="1.47715e+09" y="1.91866e+09" z="1.40584e+09" level="1" parent="1" />
+		<object active="true" x="1.71795e+09" y="1.5121e+09" z="2.34797e+09" level="1" parent="1" />
+		<object active="true" x="2.31268e+09" y="1.08002e+09" z="1.44139e+09" level="1" parent="1" />
+		<object active="true" x="1.912e+09" y="2.57312e+09" z="5.96977e+08" level="1" parent="1" />
+		<object active="true" x="1.52657e+09" y="1.69511e+09" z="8.04895e+08" level="1" parent="1" />
+		<object active="true" x="2.12229e+09" y="1.78498e+09" z="1.72001e+09" level="1" parent="1" />
+		<object active="true" x="1.64432e+09" y="1.83557e+09" z="3.42968e+08" level="1" parent="1" />
+		<object active="true" x="6.92853e+08" y="2.37313e+09" z="1.29176e+09" level="1" parent="1" />
+		<object active="true" x="1.23498e+09" y="2.14333e+09" z="1.29146e+09" level="1" parent="1" />
+		<object active="true" x="7.21869e+08" y="2.36138e+09" z="1.46901e+09" level="1" parent="1" />
+		<object active="true" x="8.81022e+08" y="2.20316e+09" z="9.47597e+08" level="1" parent="1" />
+		<object active="true" x="1.8026e+09" y="2.1203e+09" z="9.21225e+08" level="1" parent="1" />
+		<object active="true" x="2.25491e+09" y="1.35749e+09" z="9.9068e+08" level="1" parent="1" />
+		<object active="true" x="1.14517e+09" y="2.19367e+09" z="1.23648e+09" level="1" parent="1" />
+		<object active="true" x="1.44912e+09" y="2.29577e+09" z="9.7297e+08" level="1" parent="1" />
+		<object active="true" x="4.91152e+08" y="2.67156e+09" z="7.18702e+08" level="1" parent="1" />
+		<object active="true" x="5.36491e+08" y="1.0303e+09" z="1.54542e+09" level="1" parent="1" />
+		<object active="true" x="1.18247e+09" y="2.22316e+09" z="1.6432e+09" level="1" parent="1" />
+		<object active="true" x="1.72986e+09" y="1.4338e+09" z="1.73034e+09" level="1" parent="1" />
+		<object active="true" x="7.92454e+08" y="1.65522e+09" z="1.65762e+09" level="1" parent="1" />
+		<object active="true" x="1.31764e+09" y="6.04421e+08" z="1.72875e+09" level="1" parent="1" />
+		<object active="true" x="7.04466e+08" y="1.16521e+09" z="1.77196e+09" level="1" parent="1" />
+		<object active="true" x="1.88692e+09" y="1.38581e+09" z="1.06268e+09" level="1" parent="1" />
+		<object active="true" x="2.09834e+09" y="1.10346e+09" z="1.09908e+09" level="1" parent="1" />
+		<object active="true" x="1.95792e+09" y="1.98174e+09" z="7.26761e+08" level="1" parent="1" />
+		<object active="true" x="7.54685e+08" y="2.03369e+09" z="1.88266e+09" level="1" parent="1" />
+		<object active="true" x="6.874e+08" y="2.13792e+09" z="9.72056e+08" level="1" parent="1" />
+		<object active="true" x="1.78022e+09" y="1.7731e+09" z="2.6027e+09" level="1" parent="1" />
+		<object active="true" x="1.00383e+09" y="8.1917e+08" z="2.32281e+09" level="1" parent="1" />
+		<object active="true" x="1.35672e+09" y="1.99712e+09" z="2.88849e+09" level="1" parent="1" />
+		<object active="true" x="1.47858e+09" y="3.53492e+08" z="1.35733e+09" level="1" parent="1" />
+	</frame>
+	<frame id="6">
+		<comment>
+			The result after the leaf node 1 at level 1 has 15 object(s) and radius 1004408568.215718
+		</comment>
+		<query>
+			<sample x="2.17533e+09" y="1.16278e+09" z="1.03643e+09" k="15" radius="1.00441e+09" innerRadius="0" outerRadius="0" />
+			<answer x="2.19626e+09" y="1.51126e+09" z="7.56008e+08" distance="5.62523e+08" />
+			<answer x="1.88692e+09" y="1.38581e+09" z="1.06268e+09" distance="5.86351e+08" />
+			<answer x="1.71657e+09" y="1.00357e+09" z="1.38379e+09" distance="6.1266e+08" />
+			<answer x="1.95391e+09" y="1.61701e+09" z="1.25037e+09" distance="6.66621e+08" />
+			<answer x="2.19238e+09" y="1.59144e+09" z="9.05354e+08" distance="7.14623e+08" />
+			<answer x="2.1364e+09" y="1.20422e+09" z="1.60055e+09" distance="7.3069e+08" />
+			<answer x="1.57434e+09" y="1.5007e+09" z="1.08444e+09" distance="7.83363e+08" />
+			<answer x="1.57482e+09" y="1.54595e+09" z="1.2195e+09" distance="7.88202e+08" />
+			<answer x="2.31268e+09" y="1.08002e+09" z="1.44139e+09" distance="8.38273e+08" />
+			<answer x="2.7956e+09" y="1.28112e+09" z="8.47011e+08" distance="8.94375e+08" />
+			<answer x="1.95792e+09" y="1.98174e+09" z="7.26761e+08" distance="9.12705e+08" />
+			<answer x="2.56971e+09" y="8.91216e+08" z="1.19944e+09" distance="9.14509e+08" />
+			<answer x="2.12229e+09" y="1.78498e+09" z="1.72001e+09" distance="9.60127e+08" />
+			<answer x="2.42012e+09" y="1.52031e+09" z="1.2166e+09" distance="9.7979e+08" />
+			<answer x="2.02058e+09" y="1.72922e+09" z="1.29021e+09" distance="1.00441e+09" />
+		</query>
+	</frame>
+	<frame id="7">
+		<comment>
+			Entering in the leaf node 6 at level 1
+		</comment>
+		<command name="ACTIVATENODE">
+			<param name="nodeid" value="6" />
+		</command>
+		<object active="true" x="1.83429e+09" y="2.30791e+09" z="1.13406e+09" level="1" parent="6" />
+		<object active="true" x="2.34596e+09" y="2.3703e+09" z="9.61879e+08" level="1" parent="6" />
+		<object active="true" x="1.57837e+09" y="2.3399e+09" z="1.05438e+09" level="1" parent="6" />
+		<object active="true" x="1.61283e+09" y="2.64705e+09" z="1.80323e+09" level="1" parent="6" />
+		<object active="true" x="1.51881e+09" y="2.70704e+09" z="1.08478e+09" level="1" parent="6" />
+		<object active="true" x="1.72196e+09" y="3.54095e+09" z="1.33267e+09" level="1" parent="6" />
+		<object active="true" x="1.53588e+09" y="2.05611e+09" z="9.67522e+08" level="1" parent="6" />
+		<object active="true" x="2.00242e+09" y="2.3335e+09" z="6.7359e+08" level="1" parent="6" />
+		<object active="true" x="1.34951e+09" y="1.15152e+09" z="8.90192e+08" level="1" parent="6" />
+		<object active="true" x="2.29922e+09" y="2.72771e+09" z="1.13026e+09" level="1" parent="6" />
+		<object active="true" x="2.06866e+09" y="3.09066e+09" z="5.81755e+08" level="1" parent="6" />
+		<object active="true" x="1.53889e+09" y="9.30759e+08" z="1.00093e+09" level="1" parent="6" />
+		<object active="true" x="2.82566e+09" y="2.0779e+09" z="1.37168e+09" level="1" parent="6" />
+		<object active="true" x="2.13496e+09" y="2.11415e+09" z="5.85088e+08" level="1" parent="6" />
+		<object active="true" x="2.37714e+09" y="2.30683e+09" z="2.15096e+09" level="1" parent="6" />
+		<object active="true" x="2.10885e+09" y="1.87006e+09" z="1.26945e+09" level="1" parent="6" />
+		<object active="true" x="2.68714e+09" y="2.34528e+09" z="8.87953e+08" level="1" parent="6" />
+		<object active="true" x="2.64018e+09" y="1.50394e+09" z="1.50044e+09" level="1" parent="6" />
+		<object active="true" x="9.00714e+08" y="3.22672e+09" z="1.68023e+09" level="1" parent="6" />
+		<object active="true" x="2.29893e+09" y="2.72532e+09" z="1.2879e+09" level="1" parent="6" />
+		<object active="true" x="2.68392e+09" y="2.87161e+09" z="1.08435e+09" level="1" parent="6" />
+		<object active="true" x="2.59811e+09" y="1.41119e+09" z="6.79312e+08" level="1" parent="6" />
+		<object active="true" x="1.22802e+09" y="2.47577e+09" z="5.47392e+08" level="1" parent="6" />
+		<object active="true" x="2.05499e+09" y="2.7332e+09" z="3.40363e+08" level="1" parent="6" />
+		<object active="true" x="2.91141e+09" y="2.29362e+09" z="1.392e+09" level="1" parent="6" />
+		<object active="true" x="2.01416e+09" y="1.66892e+09" z="1.04221e+09" level="1" parent="6" />
+		<object active="true" x="2.65478e+09" y="2.40925e+09" z="1.83474e+09" level="1" parent="6" />
+		<object active="true" x="2.35363e+09" y="2.99026e+09" z="1.8392e+09" level="1" parent="6" />
+		<object active="true" x="1.92325e+09" y="3.68827e+09" z="1.34116e+09" level="1" parent="6" />
+		<object active="true" x="2.33183e+09" y="1.51877e+09" z="2.10287e+09" level="1" parent="6" />
+		<object active="true" x="2.53759e+09" y="2.21861e+09" z="9.74752e+08" level="1" parent="6" />
+		<object active="true" x="2.67187e+09" y="1.81634e+09" z="1.20883e+09" level="1" parent="6" />
+		<object active="true" x="2.09884e+09" y="3.44051e+09" z="1.28314e+09" level="1" parent="6" />
+		<object active="true" x="1.86512e+09" y="3.64602e+09" z="1.17234e+09" level="1" parent="6" />
+		<object active="true" x="2.2882e+09" y="1.5508e+09" z="1.58789e+09" level="1" parent="6" />
+		<object active="true" x="1.95146e+09" y="2.29956e+09" z="9.21761e+08" level="1" parent="6" />
+		<object active="true" x="3.25577e+09" y="1.60978e+09" z="1.43313e+09" level="1" parent="6" />
+		<object active="true" x="2.13822e+09" y="2.11032e+09" z="1.6589e+09" level="1" parent="6" />
+		<object active="true" x="1.518e+09" y="1.82847e+09" z="1.05246e+09" level="1" parent="6" />
+		<object active="true" x="2.23914e+09" y="1.93127e+09" z="2.15049e+09" level="1" parent="6" />
+		<object active="true" x="2.44082e+09" y="1.48555e+09" z="1.94538e+09" level="1" parent="6" />
+		<object active="true" x="3.07574e+09" y="1.86097e+09" z="1.08531e+09" level="1" parent="6" />
+		<object active="true" x="1.03621e+09" y="1.46435e+09" z="3.44211e+08" level="1" parent="6" />
+		<object active="true" x="1.23816e+09" y="2.02874e+09" z="7.24358e+08" level="1" parent="6" />
+		<object active="true" x="1.98156e+09" y="2.21222e+09" z="8.96081e+08" level="1" parent="6" />
+		<object active="true" x="1.38887e+09" y="3.03845e+09" z="1.00527e+09" level="1" parent="6" />
+		<object active="true" x="2.3642e+09" y="1.62321e+09" z="-1.55683e+08" level="1" parent="6" />
+		<object active="true" x="1.48606e+09" y="1.39857e+09" z="1.34128e+09" level="1" parent="6" />
+		<object active="true" x="1.16288e+09" y="1.30699e+09" z="2.36631e+09" level="1" parent="6" />
+		<object active="true" x="2.82819e+09" y="2.20731e+09" z="7.77297e+08" level="1" parent="6" />
+		<object active="true" x="2.57816e+09" y="1.60237e+09" z="1.58443e+09" level="1" parent="6" />
+		<object active="true" x="2.19521e+09" y="1.17679e+09" z="1.86234e+09" level="1" parent="6" />
+		<object active="true" x="1.58856e+09" y="2.6537e+09" z="1.13875e+09" level="1" parent="6" />
+		<object active="true" x="1.91735e+09" y="9.13137e+08" z="5.24239e+08" level="1" parent="6" />
+		<object active="true" x="1.17475e+09" y="1.75331e+09" z="1.17235e+09" level="1" parent="6" />
+		<object active="true" x="2.4002e+09" y="1.99674e+09" z="1.02322e+09" level="1" parent="6" />
+		<object active="true" x="1.11481e+09" y="1.62182e+09" z="7.39557e+08" level="1" parent="6" />
+		<object active="true" x="2.11952e+09" y="2.19481e+09" z="2.223e+09" level="1" parent="6" />
+		<object active="true" x="2.22198e+09" y="2.28699e+09" z="9.69464e+08" level="1" parent="6" />
+	</frame>
+	<frame id="8">
+		<comment>
+			The result after the leaf node 6 at level 1 has 15 object(s) and radius 914509479.238519
+		</comment>
+		<query>
+			<sample x="2.17533e+09" y="1.16278e+09" z="1.03643e+09" k="15" radius="9.14509e+08" innerRadius="0" outerRadius="0" />
+			<answer x="2.19626e+09" y="1.51126e+09" z="7.56008e+08" distance="5.62523e+08" />
+			<answer x="1.88692e+09" y="1.38581e+09" z="1.06268e+09" distance="5.86351e+08" />
+			<answer x="1.71657e+09" y="1.00357e+09" z="1.38379e+09" distance="6.1266e+08" />
+			<answer x="1.95391e+09" y="1.61701e+09" z="1.25037e+09" distance="6.66621e+08" />
+			<answer x="2.59811e+09" y="1.41119e+09" z="6.79312e+08" distance="6.87532e+08" />
+			<answer x="2.19238e+09" y="1.59144e+09" z="9.05354e+08" distance="7.14623e+08" />
+			<answer x="2.1364e+09" y="1.20422e+09" z="1.60055e+09" distance="7.3069e+08" />
+			<answer x="1.57434e+09" y="1.5007e+09" z="1.08444e+09" distance="7.83363e+08" />
+			<answer x="1.57482e+09" y="1.54595e+09" z="1.2195e+09" distance="7.88202e+08" />
+			<answer x="2.31268e+09" y="1.08002e+09" z="1.44139e+09" distance="8.38273e+08" />
+			<answer x="2.01416e+09" y="1.66892e+09" z="1.04221e+09" distance="8.91888e+08" />
+			<answer x="2.7956e+09" y="1.28112e+09" z="8.47011e+08" distance="8.94375e+08" />
+			<answer x="1.53889e+09" y="9.30759e+08" z="1.00093e+09" distance="8.98214e+08" />
+			<answer x="1.95792e+09" y="1.98174e+09" z="7.26761e+08" distance="9.12705e+08" />
+			<answer x="2.56971e+09" y="8.91216e+08" z="1.19944e+09" distance="9.14509e+08" />
+		</query>
+	</frame>
+	<frame id="9">
+		<comment>
+			Entering in the leaf node 4 at level 1
+		</comment>
+		<command name="ACTIVATENODE">
+			<param name="nodeid" value="4" />
+		</command>
+		<object active="true" x="1.92473e+09" y="2.37815e+09" z="1.87116e+09" level="1" parent="4" />
+		<object active="true" x="2.42001e+09" y="2.16569e+09" z="2.49397e+09" level="1" parent="4" />
+		<object active="true" x="1.32483e+09" y="2.55608e+09" z="1.85778e+09" level="1" parent="4" />
+		<object active="true" x="2.40395e+09" y="2.45945e+09" z="2.14677e+09" level="1" parent="4" />
+		<object active="true" x="9.67352e+08" y="2.33691e+09" z="2.05469e+09" level="1" parent="4" />
+		<object active="true" x="2.35977e+09" y="2.27757e+09" z="1.91251e+09" level="1" parent="4" />
+		<object active="true" x="1.32657e+09" y="2.17781e+09" z="2.28434e+09" level="1" parent="4" />
+		<object active="true" x="2.33777e+09" y="3.10254e+09" z="1.27093e+09" level="1" parent="4" />
+		<object active="true" x="1.67916e+09" y="2.24924e+09" z="1.72861e+09" level="1" parent="4" />
+		<object active="true" x="1.72721e+09" y="2.02823e+09" z="1.94625e+09" level="1" parent="4" />
+		<object active="true" x="1.11712e+09" y="2.33047e+09" z="2.44932e+09" level="1" parent="4" />
+		<object active="true" x="2.13625e+09" y="3.22918e+09" z="1.21526e+09" level="1" parent="4" />
+		<object active="true" x="1.41571e+09" y="1.54239e+09" z="1.54447e+09" level="1" parent="4" />
+		<object active="true" x="1.30049e+09" y="2.7046e+09" z="2.05359e+09" level="1" parent="4" />
+		<object active="true" x="1.98201e+09" y="3.17244e+09" z="1.65364e+09" level="1" parent="4" />
+		<object active="true" x="1.90727e+09" y="1.27839e+09" z="1.91462e+09" level="1" parent="4" />
+		<object active="true" x="2.02491e+09" y="1.54224e+09" z="2.02866e+09" level="1" parent="4" />
+		<object active="true" x="2.54715e+09" y="2.54681e+09" z="1.40127e+09" level="1" parent="4" />
+		<object active="true" x="1.41038e+09" y="2.34968e+09" z="1.91973e+09" level="1" parent="4" />
+		<object active="true" x="2.41076e+09" y="2.30662e+09" z="1.48854e+09" level="1" parent="4" />
+		<object active="true" x="1.60211e+09" y="2.29693e+09" z="1.43445e+09" level="1" parent="4" />
+		<object active="true" x="2.41042e+09" y="2.11002e+09" z="1.5976e+09" level="1" parent="4" />
+		<object active="true" x="2.39162e+09" y="2.82641e+09" z="1.87617e+09" level="1" parent="4" />
+		<object active="true" x="2.61903e+09" y="2.89391e+09" z="1.67003e+09" level="1" parent="4" />
+		<object active="true" x="1.40621e+09" y="2.73092e+09" z="1.39984e+09" level="1" parent="4" />
+		<object active="true" x="1.62553e+09" y="1.86392e+09" z="1.34585e+09" level="1" parent="4" />
+		<object active="true" x="2.25879e+09" y="2.49328e+09" z="2.04183e+09" level="1" parent="4" />
+		<object active="true" x="2.34924e+09" y="2.17765e+09" z="1.2398e+09" level="1" parent="4" />
+		<object active="true" x="1.06961e+09" y="2.38498e+09" z="1.53413e+09" level="1" parent="4" />
+		<object active="true" x="1.30611e+09" y="1.91495e+09" z="2.02828e+09" level="1" parent="4" />
+		<object active="true" x="1.99977e+09" y="2.40564e+09" z="1.8702e+09" level="1" parent="4" />
+		<object active="true" x="1.23549e+09" y="2.66596e+09" z="1.52811e+09" level="1" parent="4" />
+		<object active="true" x="1.09309e+09" y="2.25761e+09" z="2.02322e+09" level="1" parent="4" />
+		<object active="true" x="1.12042e+09" y="2.1852e+09" z="2.18529e+09" level="1" parent="4" />
+		<object active="true" x="1.98707e+09" y="2.1525e+09" z="1.22485e+09" level="1" parent="4" />
+	</frame>
+	<frame id="10">
+		<comment>
+			The result after the leaf node 4 at level 1 has 15 object(s) and radius 914509479.238519
+		</comment>
+		<query>
+			<sample x="2.17533e+09" y="1.16278e+09" z="1.03643e+09" k="15" radius="9.14509e+08" innerRadius="0" outerRadius="0" />
+			<answer x="2.19626e+09" y="1.51126e+09" z="7.56008e+08" distance="5.62523e+08" />
+			<answer x="1.88692e+09" y="1.38581e+09" z="1.06268e+09" distance="5.86351e+08" />
+			<answer x="1.71657e+09" y="1.00357e+09" z="1.38379e+09" distance="6.1266e+08" />
+			<answer x="1.95391e+09" y="1.61701e+09" z="1.25037e+09" distance="6.66621e+08" />
+			<answer x="2.59811e+09" y="1.41119e+09" z="6.79312e+08" distance="6.87532e+08" />
+			<answer x="2.19238e+09" y="1.59144e+09" z="9.05354e+08" distance="7.14623e+08" />
+			<answer x="2.1364e+09" y="1.20422e+09" z="1.60055e+09" distance="7.3069e+08" />
+			<answer x="1.57434e+09" y="1.5007e+09" z="1.08444e+09" distance="7.83363e+08" />
+			<answer x="1.57482e+09" y="1.54595e+09" z="1.2195e+09" distance="7.88202e+08" />
+			<answer x="2.31268e+09" y="1.08002e+09" z="1.44139e+09" distance="8.38273e+08" />
+			<answer x="2.01416e+09" y="1.66892e+09" z="1.04221e+09" distance="8.91888e+08" />
+			<answer x="2.7956e+09" y="1.28112e+09" z="8.47011e+08" distance="8.94375e+08" />
+			<answer x="1.53889e+09" y="9.30759e+08" z="1.00093e+09" distance="8.98214e+08" />
+			<answer x="1.95792e+09" y="1.98174e+09" z="7.26761e+08" distance="9.12705e+08" />
+			<answer x="2.56971e+09" y="8.91216e+08" z="1.19944e+09" distance="9.14509e+08" />
+		</query>
+	</frame>
+	<frame id="11">
+		<comment>
+			Entering in the leaf node 7 at level 1
+		</comment>
+		<command name="ACTIVATENODE">
+			<param name="nodeid" value="7" />
+		</command>
+		<object active="true" x="1.92043e+09" y="2.14111e+09" z="1.94073e+09" level="1" parent="7" />
+		<object active="true" x="1.73e+09" y="2.07715e+09" z="1.4674e+09" level="1" parent="7" />
+		<object active="true" x="6.40076e+08" y="1.86442e+09" z="6.99651e+08" level="1" parent="7" />
+		<object active="true" x="1.38099e+09" y="2.32706e+09" z="2.03445e+09" level="1" parent="7" />
+		<object active="true" x="6.47487e+08" y="1.94317e+09" z="8.67004e+08" level="1" parent="7" />
+		<object active="true" x="1.8475e+09" y="2.07152e+09" z="1.03544e+09" level="1" parent="7" />
+		<object active="true" x="2.48072e+09" y="1.90098e+09" z="2.13434e+09" level="1" parent="7" />
+		<object active="true" x="2.17508e+09" y="2.03512e+09" z="2.31566e+09" level="1" parent="7" />
+		<object active="true" x="2.01686e+09" y="2.52483e+09" z="1.68578e+09" level="1" parent="7" />
+		<object active="true" x="1.29804e+09" y="1.81524e+09" z="2.25983e+09" level="1" parent="7" />
+		<object active="true" x="1.92826e+09" y="2.01835e+09" z="1.17683e+09" level="1" parent="7" />
+		<object active="true" x="1.28268e+09" y="2.13501e+09" z="2.10973e+09" level="1" parent="7" />
+		<object active="true" x="2.38922e+09" y="1.94989e+09" z="2.16368e+09" level="1" parent="7" />
+		<object active="true" x="2.00226e+09" y="2.11537e+09" z="2.36353e+09" level="1" parent="7" />
+		<object active="true" x="1.78706e+09" y="1.81909e+09" z="2.35681e+09" level="1" parent="7" />
+		<object active="true" x="2.10171e+09" y="1.81536e+09" z="1.44944e+09" level="1" parent="7" />
+		<object active="true" x="1.27749e+09" y="1.91052e+09" z="7.13136e+08" level="1" parent="7" />
+		<object active="true" x="1.36593e+09" y="2.33101e+09" z="2.13487e+09" level="1" parent="7" />
+		<object active="true" x="1.91354e+09" y="1.72312e+09" z="1.69358e+09" level="1" parent="7" />
+		<object active="true" x="1.05264e+09" y="1.78013e+09" z="1.52152e+09" level="1" parent="7" />
+		<object active="true" x="1.97169e+09" y="1.53359e+09" z="1.91406e+09" level="1" parent="7" />
+		<object active="true" x="1.78447e+09" y="1.41431e+09" z="1.33442e+09" level="1" parent="7" />
+		<object active="true" x="1.31745e+09" y="2.06408e+09" z="1.2362e+09" level="1" parent="7" />
+		<object active="true" x="1.53863e+09" y="1.63952e+09" z="2.49822e+09" level="1" parent="7" />
+		<object active="true" x="1.88191e+09" y="1.93396e+09" z="2.67036e+09" level="1" parent="7" />
+		<object active="true" x="2.14758e+09" y="3.01955e+08" z="1.7321e+09" level="1" parent="7" />
+		<object active="true" x="2.27143e+09" y="1.45836e+09" z="2.57513e+09" level="1" parent="7" />
+		<object active="true" x="1.5737e+09" y="2.08793e+09" z="4.05117e+08" level="1" parent="7" />
+		<object active="true" x="8.79568e+08" y="2.0391e+09" z="1.45036e+09" level="1" parent="7" />
+		<object active="true" x="1.47736e+09" y="2.01264e+09" z="1.12493e+09" level="1" parent="7" />
+		<object active="true" x="1.98993e+09" y="1.63299e+09" z="3.50014e+09" level="1" parent="7" />
+		<object active="true" x="1.60354e+09" y="1.3353e+09" z="2.87519e+09" level="1" parent="7" />
+		<object active="true" x="1.65331e+09" y="1.8519e+09" z="6.54869e+08" level="1" parent="7" />
+		<object active="true" x="1.70173e+09" y="1.78564e+09" z="1.10704e+09" level="1" parent="7" />
+		<object active="true" x="1.57296e+09" y="1.78743e+09" z="2.08763e+09" level="1" parent="7" />
+		<object active="true" x="1.94497e+09" y="1.40203e+09" z="1.31724e+09" level="1" parent="7" />
+		<object active="true" x="2.74599e+09" y="1.99662e+09" z="1.80046e+09" level="1" parent="7" />
+		<object active="true" x="1.27065e+09" y="1.98917e+09" z="2.73827e+09" level="1" parent="7" />
+		<object active="true" x="1.10733e+09" y="1.52022e+09" z="2.43136e+09" level="1" parent="7" />
+		<object active="true" x="1.02966e+09" y="2.38532e+09" z="1.22741e+09" level="1" parent="7" />
+		<object active="true" x="1.71619e+09" y="2.49296e+09" z="1.46837e+09" level="1" parent="7" />
+		<object active="true" x="1.48915e+09" y="1.25691e+09" z="2.23138e+09" level="1" parent="7" />
+		<object active="true" x="2.10207e+09" y="2.81728e+09" z="1.54304e+09" level="1" parent="7" />
+		<object active="true" x="3.54612e+09" y="1.83421e+09" z="1.32026e+09" level="1" parent="7" />
+		<object active="true" x="2.41352e+09" y="1.25447e+09" z="1.62748e+09" level="1" parent="7" />
+		<object active="true" x="3.08974e+09" y="1.80933e+09" z="1.22262e+09" level="1" parent="7" />
+		<object active="true" x="1.93877e+09" y="2.25927e+09" z="1.25938e+09" level="1" parent="7" />
+		<object active="true" x="2.52392e+09" y="2.38565e+09" z="3.40449e+08" level="1" parent="7" />
+		<object active="true" x="1.96546e+09" y="1.78923e+09" z="2.43768e+09" level="1" parent="7" />
+		<object active="true" x="2.11364e+09" y="1.50491e+09" z="2.5924e+09" level="1" parent="7" />
+		<object active="true" x="2.82162e+09" y="2.34541e+09" z="2.51025e+09" level="1" parent="7" />
+		<object active="true" x="1.75173e+09" y="1.16827e+09" z="2.22927e+09" level="1" parent="7" />
+		<object active="true" x="1.79522e+09" y="1.21875e+09" z="1.59219e+09" level="1" parent="7" />
+		<object active="true" x="2.8238e+09" y="1.62901e+09" z="1.74776e+09" level="1" parent="7" />
+		<object active="true" x="9.97019e+08" y="1.9523e+09" z="7.12107e+08" level="1" parent="7" />
+		<object active="true" x="2.20709e+09" y="2.6057e+09" z="1.80523e+09" level="1" parent="7" />
+		<object active="true" x="2.86596e+09" y="1.94177e+09" z="1.583e+09" level="1" parent="7" />
+		<object active="true" x="2.36947e+09" y="2.13772e+09" z="8.10486e+08" level="1" parent="7" />
+		<object active="true" x="1.72434e+09" y="1.90818e+09" z="1.0193e+09" level="1" parent="7" />
+		<object active="true" x="2.37375e+09" y="1.30472e+09" z="2.63092e+09" level="1" parent="7" />
+	</frame>
+	<frame id="12">
+		<comment>
+			The result after the leaf node 7 at level 1 has 15 object(s) and radius 912704795.192158
+		</comment>
+		<query>
+			<sample x="2.17533e+09" y="1.16278e+09" z="1.03643e+09" k="15" radius="9.12705e+08" innerRadius="0" outerRadius="0" />
+			<answer x="2.19626e+09" y="1.51126e+09" z="7.56008e+08" distance="5.62523e+08" />
+			<answer x="1.88692e+09" y="1.38581e+09" z="1.06268e+09" distance="5.86351e+08" />
+			<answer x="1.71657e+09" y="1.00357e+09" z="1.38379e+09" distance="6.1266e+08" />
+			<answer x="1.95391e+09" y="1.61701e+09" z="1.25037e+09" distance="6.66621e+08" />
+			<answer x="2.59811e+09" y="1.41119e+09" z="6.79312e+08" distance="6.87532e+08" />
+			<answer x="2.19238e+09" y="1.59144e+09" z="9.05354e+08" distance="7.14623e+08" />
+			<answer x="2.1364e+09" y="1.20422e+09" z="1.60055e+09" distance="7.3069e+08" />
+			<answer x="1.57434e+09" y="1.5007e+09" z="1.08444e+09" distance="7.83363e+08" />
+			<answer x="1.57482e+09" y="1.54595e+09" z="1.2195e+09" distance="7.88202e+08" />
+			<answer x="2.41352e+09" y="1.25447e+09" z="1.62748e+09" distance="8.20767e+08" />
+			<answer x="2.31268e+09" y="1.08002e+09" z="1.44139e+09" distance="8.38273e+08" />
+			<answer x="2.01416e+09" y="1.66892e+09" z="1.04221e+09" distance="8.91888e+08" />
+			<answer x="2.7956e+09" y="1.28112e+09" z="8.47011e+08" distance="8.94375e+08" />
+			<answer x="1.53889e+09" y="9.30759e+08" z="1.00093e+09" distance="8.98214e+08" />
+			<answer x="1.95792e+09" y="1.98174e+09" z="7.26761e+08" distance="9.12705e+08" />
+		</query>
+	</frame>
+	<frame id="13">
+		<comment>
+			The final result has 15 object(s) and radius 912704795.192158
+		</comment>
+		<query>
+			<sample x="2.17533e+09" y="1.16278e+09" z="1.03643e+09" k="15" radius="9.12705e+08" innerRadius="0" outerRadius="0" />
+			<answer x="2.19626e+09" y="1.51126e+09" z="7.56008e+08" distance="5.62523e+08" />
+			<answer x="1.88692e+09" y="1.38581e+09" z="1.06268e+09" distance="5.86351e+08" />
+			<answer x="1.71657e+09" y="1.00357e+09" z="1.38379e+09" distance="6.1266e+08" />
+			<answer x="1.95391e+09" y="1.61701e+09" z="1.25037e+09" distance="6.66621e+08" />
+			<answer x="2.59811e+09" y="1.41119e+09" z="6.79312e+08" distance="6.87532e+08" />
+			<answer x="2.19238e+09" y="1.59144e+09" z="9.05354e+08" distance="7.14623e+08" />
+			<answer x="2.1364e+09" y="1.20422e+09" z="1.60055e+09" distance="7.3069e+08" />
+			<answer x="1.57434e+09" y="1.5007e+09" z="1.08444e+09" distance="7.83363e+08" />
+			<answer x="1.57482e+09" y="1.54595e+09" z="1.2195e+09" distance="7.88202e+08" />
+			<answer x="2.41352e+09" y="1.25447e+09" z="1.62748e+09" distance="8.20767e+08" />
+			<answer x="2.31268e+09" y="1.08002e+09" z="1.44139e+09" distance="8.38273e+08" />
+			<answer x="2.01416e+09" y="1.66892e+09" z="1.04221e+09" distance="8.91888e+08" />
+			<answer x="2.7956e+09" y="1.28112e+09" z="8.47011e+08" distance="8.94375e+08" />
+			<answer x="1.53889e+09" y="9.30759e+08" z="1.00093e+09" distance="8.98214e+08" />
+			<answer x="1.95792e+09" y="1.98174e+09" z="7.26761e+08" distance="9.12705e+08" />
+		</query>
+	</frame>
+</animation>
