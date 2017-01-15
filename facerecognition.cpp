@@ -42,7 +42,11 @@ void indexar()
 	char letra = 'a';
     string post;
     string pre;
+<<<<<<< HEAD
     pre = "/home/ms/AED/Face_Similarity/yalefaces/yalefaces/";
+=======
+    pre = "/home/eduardob/Desktop/Aed_Final/Face_Similarity/yalefaces/yalefaces/";	
+>>>>>>> cc589e36366fc446abe6f0a2e33ab8aa0c4c788e
 	while(aux<165)
 	{
 		if(numero == 12)
@@ -72,7 +76,11 @@ void comparation()
 {
 	SATree<imageindex>::FunDis distance = dd;
 	SATree<imageindex> tree(dd, Index);
+<<<<<<< HEAD
 	string direccionnueva="/home/ms/AED/Face_Similarity/yalefaces/yalefaces/a1.pgm";
+=======
+	string direccionnueva="/home/eduardob/Desktop/Aed_Final/Face_Similarity/yalefaces/yalefaces/a1.pgm";
+>>>>>>> cc589e36366fc446abe6f0a2e33ab8aa0c4c788e
 	CImg<unsigned char> image(direccionnueva.c_str());
 	CImgDisplay main_disp(image,direccionnueva.c_str());
 	while(!main_disp.is_closed())
