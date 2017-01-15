@@ -1,0 +1,24 @@
+Reconocimiento de Imagenes
+0.-la funcion wavelet(devuelve un array)
+   entra una imagen y devuelve su array convertido 
+1.-se crea la funcion indexar(void no devuelve nada)
+   dentro de esta se usara la funcion convertir wavelet
+   al usar la funcion indexar se abrira la carpeta con imagenes
+   se abrira imagen por imagen 
+   cada imagen lo primero que hara sera:
+   -pasar por la funcion wavelet
+   -insertarse en el slim tree junto a su ruta
+2.-se crea la funcion parecidos(devuelve un vector de nodos de slim tree)
+   dentro de esta se usara la funcion convertir wavelet
+   al usar esta funcion se abrira la imagen que se quiere comparar 
+   pasara por la funcion wavelet 
+   se comparara mediante la funcion distancia euclidea ya implementada dentro del slim tree con todo el arbol
+   aquellas que esten dentro del margen que nosotros pondremos se añadiran al vector
+   el vector se devuelve
+3.-main
+	el vector devuelto se abriran uno por uno los nodos y se abrira la parte del nodo
+	que contiene su ruta y esta se abrira
+	asi con todos los elementos del vector devuelto
+	sacamos 17
+	apruebo 
+	ez gg

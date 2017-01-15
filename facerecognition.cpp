@@ -14,7 +14,7 @@ double* idwt(int rows,int cols,double myimage[], CImg<unsigned char> image)
 	double matriz[cols][rows];
 	double R,G,B;
 	for(int i = 0;i<cols;i++)
-	{	
+	{
    	 for(int j=0;j<rows;j++)
    	 {
     	    R=image(i,j,0);
@@ -24,7 +24,7 @@ double* idwt(int rows,int cols,double myimage[], CImg<unsigned char> image)
 
     	}
 	}
-	
+
 	for(int i = 0;i<cols;i++)
 	{
 		for(int j = 0; j<rows; j++)
@@ -35,7 +35,7 @@ double* idwt(int rows,int cols,double myimage[], CImg<unsigned char> image)
 	}
 
 	haar_2d(cols,rows,myimage);
-	
+
 	/*for(int i = 0;i<cols;i++)
 	{
 		for(int j = 0; j<rows; j++)
@@ -54,7 +54,7 @@ void indexar()
 	char letra = 'a';
     string post;
     string pre;
-    pre = "/home/eduardob/Desktop/Aed_Final/Face_Similarity/yalefaces/yalefaces/";	
+    pre = "/home/ms/AED/Face_Similarity/yalefaces/yalefaces/";	
 	while(aux<165)
 	{
 		if(numero == 12)
@@ -72,7 +72,7 @@ void indexar()
 		string direccion = pre + post;
 		cout<<direccion<<endl;
 		CImg<unsigned char> image(direccion.c_str());
-		int height, width; 
+		int height, width;
 		height = image.height();
 		width = image.width();
 		int rows =(int) height;
@@ -80,7 +80,7 @@ void indexar()
 		double myimage[rows*cols];
 
 		idwt(rows,cols,myimage,image);
-				
+
 		/*
 		CImgDisplay main_disp(image,direccion.c_str());
 		while(!main_disp.is_closed())
