@@ -1,11 +1,16 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <iostream>
+
 
 #include <QtWidgets>
 #ifndef QT_NO_PRINTER
 #include <QPrintDialog>
 #endif
+
+#include "facer.h"
+#include <QPixmap>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -23,6 +28,9 @@ MainWindow::~MainWindow()
 bool MainWindow::loadFile(const QString &fileName)
 {
         QImageReader reader(fileName);
+
+
+
         reader.setAutoTransform(true);
         const QImage newImage = reader.read();
         if (newImage.isNull()) {
@@ -94,6 +102,28 @@ void MainWindow::on_load_button_clicked()
 
 void MainWindow::on_search_button_clicked()
 {
+    if(windowFilePath() != "") {
+        indexar();
+        auto res = comparation(windowFilePath().toStdString(), 5);
+
+
+
+        QGraphicsScene* scene = new QGraphicsScene();
+        ui->graphicsView = new QGraphicsView(scene);
+
+
+      // view->setLayout(ui->verticalLayout);
+
+        for(string i: res) {
+            QString qstr = QString::fromStdString(i);
+            QImage imagea;
+            imagea.load(qstr);
+            QGraphicsPixmapItem* item = new QGraphicsPixmapItem(QPixmap::fromImage(imagea));
+            scene->addItem(item);
+        }
+
+         ui->graphicsView->show();
+    }
 
 }
 

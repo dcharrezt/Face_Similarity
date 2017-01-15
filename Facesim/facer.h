@@ -15,6 +15,8 @@ using namespace std;
 #include "haar.hpp"
 #include "haar.cpp"
 int histogramsize= 256;
+vector<string> resms;
+
 struct imageindex
 {
     CImg<unsigned char> histogram_haar_image;
@@ -71,31 +73,31 @@ void indexar()
     return;
 }
 
-void comparation()
+vector<string> comparation(string dir, int ms)
 {
     SATree<imageindex>::FunDis distance = dd;
     SATree<imageindex> tree(dd, Index);
-    string direccionnueva="/home/ms/AED/Face_Similarity/yalefaces/yalefaces/a1.pgm";
+    string direccionnueva=dir;
     CImg<unsigned char> image(direccionnueva.c_str());
-    CImgDisplay main_disp(image,direccionnueva.c_str());
+    /*CImgDisplay main_disp(image,direccionnueva.c_str());
     while(!main_disp.is_closed())
         {
             main_disp.wait();
-        }
+        }*/
     imageindex comparatebitch;
     comparatebitch.histogram_haar_image = idwt(image);
     comparatebitch.myroute = direccionnueva;
-    auto resultado = tree.NNSearch(comparatebitch,5);
+    auto resultado = tree.NNSearch(comparatebitch,ms);
+
+
+
     for(auto it=resultado.begin();it!=resultado.end();it++)
     {
         string resultados = (*it).myroute;
-        CImg<unsigned char> image(resultados.c_str());
-        CImgDisplay main_disp(image,resultados.c_str());
-        while(!main_disp.is_closed())
-        {
-            main_disp.wait();
-        }
+        resms.push_back(resultados);
     }
+
+        return resms;
 }
 
 

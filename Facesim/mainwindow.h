@@ -9,6 +9,7 @@
 #endif
 
 
+
 namespace Ui {
 class MainWindow;
 }
@@ -22,7 +23,7 @@ public:
     ~MainWindow();
 
     QImage image;
-    //QLabel *imageLabel;
+    QLabel *imageLabel;
 
     bool loadFile(const QString &fileName);
     void setImage(const QImage &newImage);
