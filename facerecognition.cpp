@@ -37,37 +37,22 @@ double* idwt(int rows,int cols,double myimage[], CImg<unsigned char> image)
 {
 	double matriz[rows+1][cols+1];
 	double R,G,B;
-<<<<<<< HEAD
-	for(int i = 0;i<cols;i++)
-	{
-   	 for(int j=0;j<rows;j++)
-   	 {
-    	    R=image(i,j,0);
-        	G=image(i,j,1);
-        	B=image(i,j,2);
-        	matriz[i][j]=(0.299*R + 0.587*G + 0.114*B);
-
-    	}
-	}
-
-=======
 	cout<<"muero"<<endl;
 	for(int i = 0;i<=cols;i++)
-	{	
+	{
    	 for(int j=0;j<=rows;j++)
    	 {
-		
+
 			cout<<i<<endl<<j<<endl;
     	    R=(float)image(i,j,0);
         	G=(float)image(i,j,1);
         	B=(float)image(i,j,2);
 			cout<<"miau"<<endl;
         	matriz[j][i]=(0.299*R + 0.587*G + 0.114*B);
-	
+
      }
 	}
 	cout<<"pase"<<endl;
->>>>>>> f17ed0e78d2eab899f8dc2c1023fe59cec1c9995
 	for(int i = 0;i<cols;i++)
 	{
 		for(int j = 0; j<rows; j++)
@@ -78,11 +63,7 @@ double* idwt(int rows,int cols,double myimage[], CImg<unsigned char> image)
 	}
 	cout<<"vector hecho"<<endl;
 	haar_2d(cols,rows,myimage);
-<<<<<<< HEAD
-
-=======
 	///convertirlo de nuevo a matriz para verificar(solo es para ver si esta bien)
->>>>>>> f17ed0e78d2eab899f8dc2c1023fe59cec1c9995
 	/*for(int i = 0;i<cols;i++)
 	{
 		for(int j = 0; j<rows; j++)
@@ -98,13 +79,13 @@ void indexar()
 {
 	int aux = 0;
 	int numero = 1;
-	
+
 	imageindex* recover = new imageindex[165];
 	//double** myimage = new double*[165];
 	char letra = 'a';
     string post;
     string pre;
-    pre = "/home/ms/AED/Face_Similarity/yalefaces/yalefaces/";	
+    pre = "/home/eduardob/Desktop/Aed_Final/Face_Similarity/yalefaces/yalefaces/";
 	while(aux<165)
 	{
 		if(numero == 12)
@@ -120,16 +101,10 @@ void indexar()
 		sprintf(numstr, "%d", numero);
 		post = letrastring + numstr +".pgm";
 		string direccion = pre + post;
-<<<<<<< HEAD
-		cout<<direccion<<endl;
-		CImg<unsigned char> image(direccion.c_str());
-		int height, width;
-=======
 		//cout<<direccion<<endl;
 		CImg<unsigned char> image(direccion.c_str());//,visu(500,400,1,3,0);
 		CImgDisplay main_disp(image,direccion.c_str());
-		int height, width; 
->>>>>>> f17ed0e78d2eab899f8dc2c1023fe59cec1c9995
+		int height, width;
 		height = image.height();
 		width = image.width();
 		int rows =(int) height;
@@ -140,28 +115,20 @@ void indexar()
 		//double myimage[(rows+1)*(cols+1)];
 		double* myimage = new double[(rows+1)*(cols+1)];
 
-<<<<<<< HEAD
 		idwt(rows,cols,myimage,image);
-
-		/*
-		CImgDisplay main_disp(image,direccion.c_str());
-		while(!main_disp.is_closed())
-=======
-		idwt(rows,cols,myimage,image);	
 		recover[aux].myroute = direccion;
 		cout<<recover[aux].myroute<<endl;
 		recover[aux].importantPoints = myimage;
 		recover[aux].size= (rows+1)*(cols+1);
 		Index.push_back(recover[aux]);
-		cout<<"ey"<<endl;	
-		
-		
+		cout<<"ey"<<endl;
+
+
 		/*while(!main_disp.is_closed())
->>>>>>> f17ed0e78d2eab899f8dc2c1023fe59cec1c9995
 		{
 			main_disp.wait();
 		}*/
-		
+
 		delete [] myimage;
 		numero++;
 		aux++;
@@ -178,7 +145,7 @@ void comparation()
 	/*string direccionnueva="/home/eduardob/Desktop/Aed_Final/Face_Similarity/yalefaces/yalefaces/a1.pgm";
 	CImg<unsigned char> image(direccionnueva.c_str());
 	CImgDisplay main_disp(image,direccionnueva.c_str());
-	int height, width; 
+	int height, width;
 	height = image.height();
 	width = image.width();
 	int rows =(int) height;
