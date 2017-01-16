@@ -11,6 +11,7 @@
 
 #include "facer.h"
 #include <QPixmap>
+#include <QDebug>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -18,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    scenem = new QGraphicsScene(this);
 }
 
 MainWindow::~MainWindow()
@@ -104,22 +106,19 @@ void MainWindow::on_search_button_clicked()
 {
     if(windowFilePath() != "") {
         indexar();
-        auto res = comparation(windowFilePath().toStdString(), 5);
+        auto res = comparation(windowFilePath().toStdString(), ui->textEdit->toPlainText().toInt());
+        QImage imagea;
+        QGraphicsPixmapItem* item;
+        ui->graphicsView->setScene(scenem);
 
-
-
-        QGraphicsScene* scene = new QGraphicsScene();
-        ui->graphicsView = new QGraphicsView(scene);
-
-
-      // view->setLayout(ui->verticalLayout);
-
-        for(string i: res) {
-            QString qstr = QString::fromStdString(i);
-            QImage imagea;
+        for(auto i = 0; i < res.size(); i++) {
+            QString qstr = QString::fromStdString(res[i]);
             imagea.load(qstr);
-            QGraphicsPixmapItem* item = new QGraphicsPixmapItem(QPixmap::fromImage(imagea));
-            scene->addItem(item);
+            item = new QGraphicsPixmapItem(QPixmap::fromImage(imagea));
+
+            item->setFlag(QGraphicsItem::ItemIsMovable);
+            item->setPos(0,i*imagea.height()+20);
+            scenem->addItem(item);
         }
 
          ui->graphicsView->show();

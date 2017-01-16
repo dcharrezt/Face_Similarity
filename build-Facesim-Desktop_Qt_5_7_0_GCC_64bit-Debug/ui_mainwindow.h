@@ -22,7 +22,6 @@
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBar>
-#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -33,8 +32,6 @@ public:
     QWidget *centralWidget;
     QLabel *imageLabel;
     QTextEdit *textEdit;
-    QWidget *verticalLayoutWidget;
-    QVBoxLayout *verticalLayout;
     QGraphicsView *graphicsView;
     QPushButton *load_button;
     QPushButton *search_button;
@@ -55,17 +52,9 @@ public:
         textEdit = new QTextEdit(centralWidget);
         textEdit->setObjectName(QStringLiteral("textEdit"));
         textEdit->setGeometry(QRect(130, 40, 51, 21));
-        verticalLayoutWidget = new QWidget(centralWidget);
-        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(310, 40, 231, 181));
-        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
-        verticalLayout->setSpacing(6);
-        verticalLayout->setContentsMargins(11, 11, 11, 11);
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
         graphicsView = new QGraphicsView(centralWidget);
         graphicsView->setObjectName(QStringLiteral("graphicsView"));
-        graphicsView->setGeometry(QRect(270, 20, 256, 192));
+        graphicsView->setGeometry(QRect(230, 10, 361, 261));
         load_button = new QPushButton(centralWidget);
         load_button->setObjectName(QStringLiteral("load_button"));
         load_button->setGeometry(QRect(20, 10, 80, 22));

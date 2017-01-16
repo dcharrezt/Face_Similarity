@@ -24,6 +24,7 @@ public:
 
     QImage image;
     QLabel *imageLabel;
+    QGraphicsScene *scenem;
 
     bool loadFile(const QString &fileName);
     void setImage(const QImage &newImage);

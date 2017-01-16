@@ -37,24 +37,13 @@
      </rect>
     </property>
    </widget>
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>40</y>
-      <width>231</width>
-      <height>181</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout"/>
-   </widget>
    <widget class="QGraphicsView" name="graphicsView">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>20</y>
-      <width>256</width>
-      <height>192</height>
+      <x>230</x>
+      <y>10</y>
+      <width>361</width>
+      <height>261</height>
      </rect>
     </property>
    </widget>
